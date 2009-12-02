@@ -10,7 +10,10 @@ begin
     gem.email = "steve.agalloco@gmail.com"
     gem.homepage = "http://github.com/spagalloco/analytics-proxy-helpers"
     gem.authors = ["Steve Agalloco"]
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.files = FileList["[A-Z]*", "{rails,lib,test}/**/*"]
+    gem.add_development_dependency "thoughtbot-shoulda", ">= 2.10.2"
+    gem.add_dependency 'actionpack'
+    gem.add_dependency 'activesupport'
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
